@@ -1,0 +1,1 @@
+/home/yuregsf/.config/i3/

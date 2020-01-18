@@ -9,7 +9,9 @@
 for_window [class="^.*"] border pixel 2
 set $mod Mod4
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id redshift 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id transmission-daemon
 font pango:monospace 8
 gaps inner 15
 gaps outer 15
@@ -25,7 +27,7 @@ bindsym $mod+f fullscreen toggle
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -42,7 +44,7 @@ bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -se
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+s exec steam
 bindsym $mod+Shift+m exec spotify
-bindsym $mod+Shift+t exec telegram
+bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+z exec zathura
 bindsym $mod+Shift+v exec vlc
 bindsym $mod+Shift+p exec todoist

@@ -39,6 +39,7 @@ let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
 " Remaps
 autocmd FileType json inoremap [ [<CR>]<Esc>ko
 autocmd FileType html inoremap < <><Esc>i
+autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 inoremap { {<CR>}<Esc>ko
 inoremap [ []<Esc>i
 inoremap ( ()<Esc>i

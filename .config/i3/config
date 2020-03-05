@@ -27,7 +27,7 @@ bindsym $mod+f fullscreen toggle
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+KP_Enter exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -42,19 +42,16 @@ bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -se
 
 # start applications
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+s exec steam
-bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+z exec zathura
 bindsym $mod+Shift+v exec vlc
-bindsym $mod+Shift+p exec todoist
 
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+bindsym $mod+ccedila focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -161,3 +158,4 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3blocks
 #}
+exec_always --no-startup-id notify-send -i ~/.local/share/larbs/larbs.png 'Welcome to LARBS:' 'Press Super+F1 for the manual.' -t 10000

@@ -44,7 +44,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = tamzen:pixelsize=14;1
+font-0 = tamzen:pixelsize=8;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
@@ -53,7 +53,7 @@ separator-foreground= ${colors.foreground-alt}
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = xkeyboard memory cpu temperature wireless-network date powermenu
+modules-right = xkeyboard memory cpu temperature wireless-network date battery powermenu
 
 tray-position = right
 tray-padding = 2
@@ -90,28 +90,6 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
 
 [module/i3]
 type = internal/i3
@@ -204,7 +182,7 @@ label = %percentage_used%%
 
 [module/wireless-network]
 type = internal/network
-interface = wlp0s20f0u9
+interface = wlan0
 interval = 3.0
 
 format-connected = <label-connected>

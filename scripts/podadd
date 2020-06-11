@@ -1,0 +1,7 @@
+#!/bin/sh
+mkdir "$HOME/Podcasts/$1"
+echo "[$1]
+url=$2
+spool=\"$HOME/Podcasts/$1\"
+" >> $HOME/.castgetrc
+exit

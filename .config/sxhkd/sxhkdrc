@@ -1,0 +1,39 @@
+#Auxiliar
+super+KP_Enter
+	kitty
+super+d
+	dmenu_run -fn "Fira Code-10"
+
+#Printscreen
+@Print
+	scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+shift+Print
+	scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+	
+#Applications
+super+shift+w
+	firefox
+super+shift+s
+	steam
+super+shift+f
+	kitty ranger
+super+shift+m
+	kitty ncmpcpp
+super+shift+t
+	telegram-desktop
+super+shift+z
+	zathura
+super+shift+v
+	mpv
+
+#Audio
+XF86AudioMute
+	pulsemixer --toggle-mute
+XF86AudioRaiseVolume
+	pulsemixer --change-volume +5
+XF86AudioLowerVolume
+	pulsemixer --change-volume -5
+super+n
+	pulsemixer --set-volume 100
+XF86AudioPlay
+	mpc toggle
